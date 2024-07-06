@@ -59,6 +59,7 @@ for router in routers:
     config_commands = ['interface lo0', 'descri WAN', 'ip address 1.1.1.1 255.255.255.255', 'exit']
     if re.search('Lo0', output):
         print('loopback0 exist')
+        print('no need to create new loopback')
     else:
         print("Configuring loopback")
         connection.send_config_set(config_commands)
